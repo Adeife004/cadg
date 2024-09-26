@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ Ambassador Drama Group</title>
+    <link rel="icon" href="./img/cadg-1 (1).png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #0b1a67;
+        color: #ffff;
+        font-family: "Nunito", sans-serif !important;
+    }
+    .image {
+        text-align: center;
+    }
+    .image img {
+        width: 25%;
+        border: 2px solid #ffff;
+        border-radius: 50%;
+        margin-top: 1%;
+    }
+    .image h3 {
+        font-size: 28px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .main-user-info {
+        display: flex;
+        gap: 4rem;
+        margin-top: 3%;
+        width: 50%;
+    }
+    .user-input-box {
+        font-size: 18px;
+    }
+    .user-input-box input {
+        padding: 15px;
+        width: 7cm;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #344cc5;
+        color: #0b1a67;
+        font-size: 18px;
+    }
+    .gender-category {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+    } 
+    .gender input {
+        accent-color: #0b1a67;
+    }
+    fieldset {
+        border: 2px solid #344cc5;
+        border-radius: 3px;
+        width: 50%;
+        margin-top: 3%;
+        padding: 5px;
+    }
+    legend {
+        margin-left: 3%;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .content1 {
+        margin-top: 4%;
+        font-size: 18px;
+    }
+    .refrence-user {
+        width: 20%;
+    }
+    .form-button {
+        margin-top: 5%;
+        text-align: center;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+    button {
+        height: 55px;
+        width: 30%;
+        color: #fff;
+        background-color: #344cc5;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 30px;
+        border-radius: 6px;
+        transition: all 0.2 ease;
+    }
+    button:hover {
+        background-color: #0a29c7;
+    }
+    .contact {
+        margin-top: 4%;
+        background: #e0e2e3;
+        box-shadow: 2px 2px 15px #ffff;
+        width: 50%;
+        height: 40vh;
+        padding: 20px;
+        text-align: center;
+    }
+    .contact img {
+        margin-top: 3%;
+        width: 10%;
+    }
+    .contact h2 {
+        color: #000;
+    }
+    .contact p {
+        color: #000;
+    }
+@media screen and (max-width: 600px) {
+    .image {
+        text-align: center;
+    }
+    .image img {
+        width: 50%;
+    }
+    .main-user-info {
+       display: block !important;
+    }
+    .contact {
+        width: 50%;
+    }
+    .contact img {
+        width: 30%;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div class="image">
+            <a href="cadg.html"><img src="./img/cadg-1.png" alt=""></a>
+            <h3>CADG Application Form</h3>
+        </div>
+        <form action="#" method="post">
+            <div class="main-user-info">
+                <div>
+                    <div class="user-input-box">
+                        <label for="First Name">First Name</label> <br>
+                        <input type="text" id="First Name" placeholder="Enter First Name" maxlength="20" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="Last Name">Last Name</label> <br>
+                        <input type="text" id="Last Name" placeholder="Enter Last Name" maxlength="20" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="First Name">Email</label> <br>
+                        <input type="text" id="Email" placeholder="Enter Email" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="user-input-box">
+                        <label for="Phone Number">Phone Number</label> <br>
+                        <input type="number" id="Phone Number" placeholder="Phone Number" maxlength="11" required>
+                    </div>
+                    <div class="user-input-box">
+                        <label for="Date of Birth">Date of Birth</label> <br>
+                        <input type="date" id="Date of Birth" required>
+                    </div> 
+                    <div class="user-input-box">
+                        <label for="Address">Home Address</label> <br>
+                        <input type="text" id="Address" required>
+                    </div> 
+                </div>
+            </div>
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-category">
+                    <div class="gender">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <fieldset>
+                <legend> Experience and Skills </legend>
+                <div class="content1">
+                    <h4>1. Tell us about your experience in drama and theater so far</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>2. What types of roles have you played (comedy, tragedy or musical), and which one was the most challenging for you?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>3. What skills do you bring to the team (e.g. singing, dancing, writing, directing, others)
+                    </h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>4. Do you have any formal training in acting? If so, where and what did you learn?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>5. What inspired you to pursue drama and acting?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Availability and Commitment</legend>
+                <div class="content1">
+                    <h4>1. What is your current availability for rehearsals and performances?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>2. Are there any professional or personal commitments (like school, work, or travel) that might interfere with the rehearsal or performance schedule?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>3. Are you comfortable with being called in on short notice for reshoots, extra performances, or emergencies?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>4. Would you be willing to travel if the production requires out-of-town performances?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+                <div class="content1">
+                    <h4>5. Do you have any preferences or limitations regarding rehearsal times?</h4>
+                    <label for="answer">Your Answer:</label>
+                    <textarea id="answer" name="answer" rows="7" cols="50" placeholder="Type your answer here" required>
+                    </textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>References</legend>
+                <div class="main-user-info">
+                    <div>
+                        <div class="user-input-box">
+                            <label for="First Name">First Name</label> <br>
+                            <input type="text" id="First Name" placeholder="Enter First Name" maxlength="20" required>
+                        </div>
+                        <div class="user-input-box">
+                            <label for="Last Name">Last Name</label> <br>
+                            <input type="text" id="Last Name" placeholder="Enter Last Name" maxlength="20" required>
+                        </div>
+                        <div class="user-input-box">
+                            <label for="First Name">Email</label> <br>
+                            <input type="text" id="Email" placeholder="Enter Email" required>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="user-input-box">
+                            <label for="Phone Number">Phone Number</label> <br>
+                            <input type="number" id="Phone Number" placeholder="Phone Number" required>
+                        </div>
+                        <div class="user-input-box">
+                            <label for="Date of Birth">Occupation</label> <br>
+                            <input type="text" id="Occupation" required>
+                        </div> 
+                        <div class="user-input-box">
+                            <label for="Address">Home Address</label> <br>
+                            <input type="text" id="Address" required>
+                        </div> 
+                    </div>
+                </div>
+            </fieldset>
+            <button type="sumit">Submit</button>
+        </form>
+        <div class="contact">
+            <h2>Contact Us:</h2>
+            <img src="./img/whatsapp.logo.webp" alt="">
+            <p>+2348028758635</p>
+            <p>+2349015495471</p>
+            <p>+2348162915719</p>
+            <p>+2348110730748</p>
+        </div>
+    </div>
+</body>
+</html>

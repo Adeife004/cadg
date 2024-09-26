@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0a0707;
+}
+.parent {
+    text-align: center
+}
+.parent button {
+    text-align: right;
+    margin-top: 4%; 
+}
+.parent a{
+    text-decoration: none;
+}
+.parent button{
+    background: #040227;
+    border: 1px solid #0d1fbd;
+    color: #fff;
+    border-radius: 30px;
+    padding: 20px 35px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: 3s;
+    cursor: pointer;
+} 
+.parent button:hover {
+    background-color: #ffff;
+    font-weight: 600;
+    color: #040227;
+}
+.container {
+    text-align: center
+}
+.container img{
+    margin-top: 3%;
+    width: 30%;
+    border: 1px solid #fff;
+    border-radius: 1000px;
+    transition: 5s;
+}
+.container img:hover {
+    background-color: #040227;
+}
+@media screen and (max-width: 768px) {
+    .container a img {
+        width: 50%;
+        margin-top: 10%;
+    }
+}
