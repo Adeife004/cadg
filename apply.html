@@ -180,12 +180,12 @@
                 <h3>Gender</h3>
                 <div class="gender-category">
                     <div class="gender">
-                        <input type="radio" name="male">
+                        <input type="radio" name="gender" value="male" checked>
                         <label for="male">Male</label>
                     </div>
                     <div class="gender">
-                        <input type="radio" name="female">
                         <label for="female">Female</label>
+                        <input type="radio" name="gender" value="female">
                     </div>
                 </div>
             </div>
@@ -321,7 +321,7 @@
             }).then(response => {
                 if (response.ok) {
                     alert('Form successfully submitted.');
-                    window.location.href = 'https://cadg.vercel.app/.'
+                    window.location.href = 'https://cadg.vercel.app/'
                 }
             }).catch(error => console.error('Error:', error));
         });
