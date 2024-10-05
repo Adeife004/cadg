@@ -306,36 +306,25 @@
     <script>
         document.getElementById('cadg').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent default form submission
-    
-    
+            
+            // Show the alert
             alert('Form submitted successfully!');
-    
+
+      
             const formAction = "https://formsubmit.co/f2ad48ab2a0b89ac9e6668f21cca3504";
-            const formData = new FormData(this);
-    
+            const formData = new FormData(this); // Capture form data
+            
+            // Redirect or simulate form submission
             fetch(formAction, {
                 method: 'POST',
                 body: formData
-            })
-            .then(response => {
+            }).then(response => {
                 if (response.ok) {
-             
                     alert('Form successfully submitted.');
-    
-             
-                    setTimeout(function() {
-                        window.location.href = 'https://cadg.vercel.app/';
-                    }, 500); // 500ms delay
-                } else {
-                    alert('There was an error submitting the form. Please try again.');
-                    console.error('Form submission failed:', response.statusText);
+                    document.getElementById('cadg').reset();
                 }
-            })
-            .catch(error => {
-                alert('There was a problem with the form submission.');
-                console.error('Error:', error);
-            });
-        });
-    </script>
+            }).catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
