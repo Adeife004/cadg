@@ -149,7 +149,7 @@
             <a href="cadg.html"><img src="./img/cadg-1.png" alt=""></a>
             <h3>CADG Application Form</h3>
         </div>
-        <form action="https://formsubmit.co/f2ad48ab2a0b89ac9e6668f21cca3504" method="POST">
+        <form id="cadg">
             <div class="main-user-info">
                 <div>
                     <div class="user-input-box">
@@ -290,7 +290,7 @@
                 </div>
             </fieldset>
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://cadg.vercel.app/.">
+            <!-- <input type="hidden" name="_next" value="https://cadg.vercel.app/."> -->
             <input type="hidden" name="_template" value="table">
             <button type="sumit">Submit</button>
         </form>
@@ -303,5 +303,28 @@
             <p>+2348110730748</p>
         </div>
     </div>
+    <script>
+        document.getElementById('cadg').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Show the alert
+            alert('Form submitted successfully!');
+
+      
+            const formAction = "https://formsubmit.co/f2ad48ab2a0b89ac9e6668f21cca3504";
+            const formData = new FormData(this); // Capture form data
+            
+            // Redirect or simulate form submission
+            fetch(formAction, {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                if (response.ok) {
+                    alert('Form successfully submitted.');
+                    window.location.href = 'https://cadg.vercel.app/.'
+                }
+            }).catch(error => console.error('Error:', error));
+        });
+    </script>
 </body>
 </html>
